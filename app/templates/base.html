@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="flex_container">
+        <div class="img_cont">
+            <img src="../static/imagens/logo.png" alt="logo" class="logo">
+        </div>
+        <nav>
+            <a href="/home">Home</a>
+            <a>|</a>
+            <a href="/about">Quem Somos</a>
+            <a>|</a>
+            <a href="/contato">Contato </a>
+        </nav>
+    </header>
+
+    {% block content %} {% endblock %}
+
+    <footer>
+        <p>Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
